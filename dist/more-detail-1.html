@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load History Mock-Up</title>
+    <link rel="stylesheet" type="text.css" href="/index.2a544223.css">
+    <link rel="stylesheet" href="/index.f04f831a.css">
+    <link rel="stylesheet" href="/index.86e46435.css">
+    <link rel="stylesheet" href="/index.d7dff496.css">
+    <link rel="stylesheet" href="/index.c4c97a77.css">
+  </head>
+  <body>
+    <div class="Header">
+      <div class="Logo">
+        <img class="Logo-img" src="/precog-logo.22a1dd20.png">
+      </div>
+      <div class="ButtonGroup">
+        <!-- <a class="Button button" href="load-history-full.html"
+          ><i class="Icon fas fa-table"></i>Load History</a
+        > -->
+        <button class="Button">
+          <i class="Icon fas fa-user-circle"></i>My subscription</button><button class="Button">
+          <i class="Icon fas fa-sign-out-alt"></i>Log out
+        </button>
+      </div>
+    </div>
+    <div class="Page">
+      <div class="Container">
+        <p><strong>{Source}</strong> is currently rate limiting Precog.</p>
+        <p>Regular data loading will resume at 00:00 UTC.</p>
+        <p>
+          <strong>{Source}</strong> has rate limited your data from loading into
+          or through Precog for 26 hours total
+        </p>
+        <div class="Chart">
+          <div>
+            <canvas id="lineChart"></canvas>
+            <!-- Styles for the chart get applied to this div -->
+          </div>
+
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          <!-- <script src="path/to/chartjs/dist/chart.umd.js"></script> -->
+
+          <script>// import Chart from "chart.js/auto";
+Chart.defaults.backgroundColor = "rgba(90, 67, 201, 0.5)";
+// Chart.defaults.backgroundColor = "#fff";
+Chart.defaults.borderColor = "#5a43c9";
+Chart.defaults.color = "#383838";
+const ctx = document.getElementById("lineChart");
+const rateLimitMins = [
+    1,
+    1,
+    1,
+    1,
+    6,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    0.6,
+    0.6,
+    0.6,
+    0.6,
+    6,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60
+];
+const hourDay = [
+    "2024/01/01 0:00",
+    "2024/01/01 1:00",
+    "2024/01/01 2:00",
+    "2024/01/01 3:00",
+    "2024/01/01 4:00",
+    "2024/01/01 5:00",
+    "2024/01/01 6:00",
+    "2024/01/01 7:00",
+    "2024/01/01 8:00",
+    "2024/01/01 9:00",
+    "2024/01/01 10:00",
+    "2024/01/01 11:00",
+    "2024/01/01 12:00",
+    "2024/01/01 13:00",
+    "2024/01/01 14:00",
+    "2024/01/01 15:00",
+    "2024/01/01 16:00",
+    "2024/01/01 17:00",
+    "2024/01/01 18:00",
+    "2024/01/01 19:00",
+    "2024/01/01 20:00",
+    "2024/01/01 21:00",
+    "2024/01/01 22:00",
+    "2024/01/01 23:00",
+    "2024/01/02 0:00",
+    "2024/01/02 1:00",
+    "2024/01/02 2:00",
+    "2024/01/02 3:00",
+    "2024/01/02 4:00",
+    "2024/01/02 5:00",
+    "2024/01/02 6:00",
+    "2024/01/02 7:00",
+    "2024/01/02 8:00",
+    "2024/01/02 9:00",
+    "2024/01/02 10:00",
+    "2024/01/02 11:00",
+    "2024/01/02 12:00",
+    "2024/01/02 13:00",
+    "2024/01/02 14:00",
+    "2024/01/02 15:00",
+    "2024/01/02 16:00",
+    "2024/01/02 17:00",
+    "2024/01/02 18:00",
+    "2024/01/02 19:00",
+    "2024/01/02 20:00",
+    "2024/01/02 21:00",
+    "2024/01/02 22:00",
+    "2024/01/02 23:00",
+    "2024/01/03 0:00",
+    "2024/01/03 1:00"
+];
+// console.log(rateLimitMins);
+new Chart(ctx, {
+    type: "line",
+    data: {
+        labels: hourDay,
+        datasets: [
+            {
+                label: "Rate Limiting",
+                data: rateLimitMins,
+                borderWidth: 1
+            }
+        ]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true,
+                grid: {
+                    color: "#d9d9d9"
+                },
+                title: {
+                    display: true,
+                    text: "Minutes of Rate Limiting"
+                }
+            },
+            x: {
+                grid: {
+                    display: false
+                },
+                title: {
+                    display: true,
+                    text: "Date and hour"
+                }
+            }
+        }
+    }
+});
+
+</script>
+        </div>
+      </div>
+    </div>
+  <script src="/more-detail-1.810a5da5.js"></script></body>
+</html>
