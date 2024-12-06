@@ -16,7 +16,7 @@
         <img class="Logo-img" src="../img/precog-logo.png" />
       </div>
       <div class="ButtonGroup">
-        <a class="Button button" href="load-history-full.html"
+        <a class="Button button" href="#"
           ><i class="Icon fas fa-table"></i>Load History</a
         >
         <button class="Button">
@@ -27,15 +27,16 @@
       </div>
     </div>
     <div class="Page">
-      <p>Can you see me?</p>
+      <div class="Container">
+        <p>Can you see me?</p>
+        <p>in realtime?</p>
 
-      <div style="width: 500px"><canvas id="dimensions"></canvas></div>
+        <!-- <div><canvas style="width: 85%" id="line"></canvas></div>
+        <script type="module" src="line.js"></script> -->
 
-      <br />
-      <!-- <div style="width: 800px"><canvas id="acquisitions"></canvas></div> -->
-
-      <script type="module" src="dimensions.js"></script>
-      <!-- <script type="module" src="acquisitions.js"></script> -->
+        <div><canvas style="width: 85%" id="lineObject"></canvas></div>
+        <script type="module" src="lineObject.js"></script>
+      </div>
     </div>
   </body>
 </html>

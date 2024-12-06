@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Load History Mock-Up</title>
+    <link rel="stylesheet" type="text.css" href="./scss/normalize.css" />
+    <link rel="stylesheet" href="./scss/main.css" />
+    <link rel="stylesheet" href="./scss/fonts.css" />
+    <link rel="stylesheet" href="./scss/fontawesome-all.css" />
+    <link rel="stylesheet" href="./scss/google.css" />
+  </head>
+  <body>
+    <div class="Header">
+      <div class="Logo">
+        <img class="Logo-img" src="img/precog-logo.png" />
+      </div>
+      <div class="ButtonGroup">
+        <!-- <a class="Button button" href="load-history-full.html"
+          ><i class="Icon fas fa-table"></i>Load History</a
+        > -->
+        <button class="Button">
+          <i class="Icon fas fa-user-circle"></i>My subscription</button
+        ><button class="Button">
+          <i class="Icon fas fa-sign-out-alt"></i>Log out
+        </button>
+      </div>
+    </div>
+    <div class="Page">
+      <div class="Container">
+        <!-- <h2 class="">Pipeline: Daily Activity {{Pipeline name}}</h2>
+        <h3>Conection: Google Ads (Source Kind Name)</h3>
+        <h3>Spencer Project GA4{{Source-name}}</h3> -->
+        <table>
+          <colgroup>
+            <col class="data-set-header" />
+            <col class="data-load-complete-header" />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+          </colgroup>
+          <tr>
+            <th>Load Start</th>
+            <th>Load Complete</th>
+            <th>Total Data Loaded</th>
+            <th>Pipeline</th>
+            <th>Connector (source)</th>
+            <th>Data Set</th>
+            <th>Currently Rate Limited</th>
+            <th>Rate Limiting Total</th>
+          </tr>
+          <tr>
+            <td>Mon, 29 Jul 2024 16:43:10</td>
+            <td>Mon, 29 Jul 2024 16:43:10</td>
+            <td>20 KB</td>
+            <td>Daily Ad Numbers</td>
+            <td>Google Ads</td>
+            <td>Ad Groups</td>
+            <td>Yes, continuing at 00:00 UTC</td>
+            <td>
+              26 hours
+              <a href="more-detail-1.html"> <strong>More detail </strong></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Mon, 29 Jul 2024 16:43:10</td>
+            <td>Mon, 29 Jul 2024 16:43:10</td>
+            <td>20 KB</td>
+            <td>Daily Ad Numbers</td>
+            <td>Google Ads</td>
+            <td>Ads</td>
+            <td>Yes, continuing at 00:00 UTC</td>
+            <td>
+              26 hours
+              <a href="more-detail-2.html"> <strong>More detail </strong></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Mon, 29 Jul 2024 16:43:10</td>
+            <td>Mon, 29 Jul 2024 16:43:10</td>
+            <td>20 KB</td>
+            <td>Daily Ad Numbers</td>
+            <td>Google Ads</td>
+            <td>Age Demographics</td>
+            <td>Yes</td>
+            <td>
+              26 hours
+              <a href="more-detail-3.html"><strong>More Details</strong></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Mon, 29 Jul 2024 16:43:10</td>
+            <td>Mon, 29 Jul 2024 16:43:10</td>
+            <td>20 KB</td>
+            <td>Daily Ad Numbers</td>
+            <td>Google Ads</td>
+            <td>Audiences</td>
+            <td>No</td>
+            <td>
+              0 Seconds
+              <a href="more-detail-4.html"><strong>More Details</strong></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Mon, 29 Jul 2024 16:43:10</td>
+            <td>Mon, 29 Jul 2024 16:43:10</td>
+            <td>20 KB</td>
+            <td>Daily Ad Numbers</td>
+            <td>Google Ads</td>
+            <td>Campaigns</td>
+            <td>🔴 Yes</td>
+            <td>
+              26 hours
+              <a href="more-detail-3.html"><strong>More Details</strong></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Mon, 29 Jul 2024 16:43:10</td>
+            <td>Mon, 29 Jul 2024 16:43:10</td>
+            <td>20 KB</td>
+            <td>Daily Ad Numbers</td>
+            <td>Google Ads</td>
+            <td>Extensions</td>
+            <td>🟢 No</td>
+            <td>
+              0 minutes <a href=""><strong></strong></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Mon, 29 Jul 2024 16:43:10</td>
+            <td>Mon, 29 Jul 2024 16:43:10</td>
+            <td>20 KB</td>
+            <td>Daily Ad Numbers</td>
+            <td>Google Ads</td>
+            <td>Gender Demographics</td>
+            <td>Active, continuing at 00:00 UTC</td>
+            <td>
+              26 hours <a href=""><strong>[More Details]</strong></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Mon, 29 Jul 2024 16:43:10</td>
+            <td>Mon, 29 Jul 2024 16:43:10</td>
+            <td>20 KB</td>
+            <td>Daily Ad Numbers</td>
+            <td>Google Ads</td>
+            <td>Locations</td>
+            <td>Inactive</td>
+            <td>0 minutes <a href=""></a></td>
+          </tr>
+          <tr>
+            <td>Mon, 29 Jul 2024 16:43:10</td>
+            <td>Mon, 29 Jul 2024 16:43:10</td>
+            <td>20 KB</td>
+            <td>Daily Ad Numbers</td>
+            <td>Google Ads</td>
+            <td>Search Keywords</td>
+            <td>🔴 Active</td>
+            <td>
+              26 hours
+              <a href="more-detail-3.html"><strong>More Details</strong></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Mon, 29 Jul 2024 16:43:10</td>
+            <td>Mon, 29 Jul 2024 16:43:10</td>
+            <td>20 KB</td>
+            <td>Daily Ad Numbers</td>
+            <td>Google Ads</td>
+            <td>Search Terms</td>
+            <td>Inactive</td>
+            <td>
+              0 minutes
+              <a href="more-detail-4.html"><strong>More Details</strong></a>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="Container">
+        <table class="table-no-border">
+          <colgroup class="table-no-border">
+            <col class="data-set-header" />
+            <col class="data-load-complete-header" />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+          </colgroup>
+          <tr class="table-no-border">
+            <th class="table-no-border">Load Start</th>
+            <th class="table-no-border">Load Complete</th>
+            <th class="table-no-border">Total Data Loaded</th>
+            <th class="table-no-border">Pipeline</th>
+            <th class="table-no-border">Connector (source)</th>
+            <th class="table-no-border">Data Set</th>
+            <th class="table-no-border">Currently Rate Limited</th>
+            <th class="table-no-border">Rate Limiting Total</th>
+          </tr>
+          <tr class="table-no-border">
+            <td class="table-no-border">Mon, 29 Jul 2024 16:43:10</td>
+            <td class="table-no-border">Mon, 29 Jul 2024 16:43:10</td>
+            <td class="table-no-border">20 KB</td>
+            <td class="table-no-border">Daily Ad Numbers</td>
+            <td class="table-no-border">Google Ads</td>
+            <td class="table-no-border">Ad Groups</td>
+            <td class="table-no-border">Yes, continuing at 00:00 UTC</td>
+            <td class="table-no-border">
+              26 hours
+              <a href="more-detail-1.html"> <strong>More detail </strong></a>
+            </td>
+          </tr>
+          <tr class="table-no-border">
+            <td class="table-no-border">Mon, 29 Jul 2024 16:43:10</td>
+            <td class="table-no-border">Mon, 29 Jul 2024 16:43:10</td>
+            <td class="table-no-border">20 KB</td>
+            <td class="table-no-border">Daily Ad Numbers</td>
+            <td class="table-no-border">Google Ads</td>
+            <td class="table-no-border">Ads</td>
+            <td class="table-no-border">Yes, continuing at 00:00 UTC</td>
+            <td class="table-no-border">
+              26 hours
+              <a href="more-detail-2.html"> <strong>More detail </strong></a>
+            </td>
+          </tr>
+          <tr class="table-no-border">
+            <td class="table-no-border">Mon, 29 Jul 2024 16:43:10</td>
+            <td class="table-no-border">Mon, 29 Jul 2024 16:43:10</td>
+            <td class="table-no-border">20 KB</td>
+            <td class="table-no-border">Daily Ad Numbers</td>
+            <td class="table-no-border">Google Ads</td>
+            <td class="table-no-border">Age Demographics</td>
+            <td class="table-no-border">Yes</td>
+            <td class="table-no-border">
+              26 hours
+              <a href="more-detail-3.html"><strong>More Details</strong></a>
+            </td>
+          </tr>
+          <tr class="table-no-border">
+            <td class="table-no-border">Mon, 29 Jul 2024 16:43:10</td>
+            <td class="table-no-border">Mon, 29 Jul 2024 16:43:10</td>
+            <td class="table-no-border">20 KB</td>
+            <td class="table-no-border">Daily Ad Numbers</td>
+            <td class="table-no-border">Google Ads</td>
+            <td class="table-no-border">Audiences</td>
+            <td class="table-no-border">No</td>
+            <td class="table-no-border">
+              0 Seconds
+              <a href="more-detail-4.html"><strong>More Details</strong></a>
+            </td>
+          </tr>
+          <tr>
+            <td class="table-no-border">Mon, 29 Jul 2024 16:43:10</td>
+            <td class="table-no-border">Mon, 29 Jul 2024 16:43:10</td>
+            <td class="table-no-border">20 KB</td>
+            <td class="table-no-border">Daily Ad Numbers</td>
+            <td class="table-no-border">Google Ads</td>
+            <td class="table-no-border">Campaigns</td>
+            <td class="table-no-border">🔴 Yes</td>
+            <td class="table-no-border">
+              26 hours
+              <a href="more-detail-3.html"><strong>More Details</strong></a>
+            </td>
+          </tr>
+          <tr>
+            <td class="table-no-border">Mon, 29 Jul 2024 16:43:10</td>
+            <td class="table-no-border">Mon, 29 Jul 2024 16:43:10</td>
+            <td class="table-no-border">20 KB</td>
+            <td class="table-no-border">Daily Ad Numbers</td>
+            <td class="table-no-border">Google Ads</td>
+            <td class="table-no-border">Extensions</td>
+            <td class="table-no-border">🟢 No</td>
+            <td class="table-no-border">
+              0 minutes <a href=""><strong></strong></a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
