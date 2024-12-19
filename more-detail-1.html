@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Load History Mock-Up</title>
-    <link rel="stylesheet" type="text.css" href="./scss/normalize.css" />
+    <link rel="stylesheet" type="text.css" href="./scss/_normalize.css" />
     <link rel="stylesheet" href="./scss/main.css" />
-    <link rel="stylesheet" href="./scss/fonts.css" />
-    <link rel="stylesheet" href="./scss/fontawesome-all.css" />
+    <link rel="stylesheet" href="./scss/_fonts.css" />
+    <link rel="stylesheet" href="./scss/_fontawesome-all.css" />
     <link rel="stylesheet" href="./scss/google.css" />
   </head>
   <body>
@@ -28,59 +28,115 @@
     </div>
     <div class="Page">
       <div class="Container">
+        <p>This is a non-build view of this chart.</p>
         <p><strong>{Source}</strong> is currently rate limiting Precog.</p>
         <p>Regular data loading will resume at 00:00 UTC.</p>
         <p>
           <strong>{Source}</strong> has rate limited your data from loading into
-          or through Precog for 26 hours total
+          or throught Precog for 26 hours total
         </p>
-        <div class="Chart">
-          <div>
-            <canvas id="lineChart"></canvas>
-            <!-- Styles for the chart get applied to this div -->
-          </div>
+        <div>
+          <canvas id="barChart"></canvas>
+          <!-- Styles for the chart get applied to this div -->
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-          <!-- <script src="path/to/chartjs/dist/chart.umd.js"></script> -->
+        <script>
+          // import { rateLimitMins, hourDay } from "";
+          Chart.defaults.backgroundColor = "rgba(90, 67, 201, 0.5)";
+          Chart.defaults.borderColor = "#5a43c9";
+          Chart.defaults.color = "#383838";
 
-          <script>
-            // import Chart from "chart.js/auto";
-            import { rateLimitMins, hourDay } from "src/data.js";
+          const bar = document.getElementById("barChart");
 
-            Chart.defaults.backgroundColor = "rgba(90, 67, 201, 0.5)";
-            Chart.defaults.borderColor = "#5a43c9";
-            Chart.defaults.color = "#383838";
+          const rateLimitMins = [
+            1, 1, 1, 1, 6, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60,
+            60, 60, 60, 60, 60, 60, 60, 0.6, 0.6, 0.6, 0.6, 6, 60, 60, 60, 60,
+            60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60,
+          ];
 
-            const ctx = document.getElementById("lineChart");
+          const hourDay = [
+            "2024/01/01 0:00",
+            "2024/01/01 1:00",
+            "2024/01/01 2:00",
+            "2024/01/01 3:00",
+            "2024/01/01 4:00",
+            "2024/01/01 5:00",
+            "2024/01/01 6:00",
+            "2024/01/01 7:00",
+            "2024/01/01 8:00",
+            "2024/01/01 9:00",
+            "2024/01/01 10:00",
+            "2024/01/01 11:00",
+            "2024/01/01 12:00",
+            "2024/01/01 13:00",
+            "2024/01/01 14:00",
+            "2024/01/01 15:00",
+            "2024/01/01 16:00",
+            "2024/01/01 17:00",
+            "2024/01/01 18:00",
+            "2024/01/01 19:00",
+            "2024/01/01 20:00",
+            "2024/01/01 21:00",
+            "2024/01/01 22:00",
+            "2024/01/01 23:00",
+            "2024/01/02 0:00",
+            "2024/01/02 1:00",
+            "2024/01/02 2:00",
+            "2024/01/02 3:00",
+            "2024/01/02 4:00",
+            "2024/01/02 5:00",
+            "2024/01/02 6:00",
+            "2024/01/02 7:00",
+            "2024/01/02 8:00",
+            "2024/01/02 9:00",
+            "2024/01/02 10:00",
+            "2024/01/02 11:00",
+            "2024/01/02 12:00",
+            "2024/01/02 13:00",
+            "2024/01/02 14:00",
+            "2024/01/02 15:00",
+            "2024/01/02 16:00",
+            "2024/01/02 17:00",
+            "2024/01/02 18:00",
+            "2024/01/02 19:00",
+            "2024/01/02 20:00",
+            "2024/01/02 21:00",
+            "2024/01/02 22:00",
+            "2024/01/02 23:00",
+            "2024/01/03 0:00",
+            "2024/01/03 1:00",
+          ];
 
-            new Chart(ctx, {
-              type: "line",
-              data: {
-                labels: hourDay,
-                datasets: [
-                  {
-                    label: "Rate Limiting",
-                    data: rateLimitMins,
-                    borderWidth: 1,
-                  },
-                ],
-              },
-              options: {
-                scales: {
-                  y: {
-                    beginAtZero: true,
-                    grid: { color: "#d9d9d9" },
-                    title: { display: true, text: "Minutes of Rate Limiting" },
-                  },
-                  x: {
-                    grid: { display: false },
-                    title: { display: true, text: "Date and hour" },
-                  },
+          new Chart(bar, {
+            type: "bar",
+            data: {
+              labels: hourDay,
+              datasets: [
+                {
+                  display: false,
+                  data: rateLimitMins,
+                  borderWidth: 1,
+                },
+              ],
+            },
+            options: {
+              animation: false,
+              plugins: { legend: false },
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  grid: { color: "#d9d9d9" },
+                  title: { display: true, text: "Minutes of Rate Limiting" },
+                },
+                x: {
+                  grid: { display: false },
+                  title: { display: true, text: "Date and hour" },
                 },
               },
-            });
-          </script>
-        </div>
+            },
+          });
+        </script>
       </div>
     </div>
   </body>

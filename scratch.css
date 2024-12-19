@@ -1,0 +1,107 @@
+table {
+  width: 400px;
+  border-spacing: 30px;
+}
+table,
+th,
+td {
+  border: 1px solid #5a43c9;
+  /* border: none; */
+  /* border-collapse: collapse; */
+  background-color: white;
+}
+th,
+td {
+  padding: 10px;
+}
+th {
+  background-color: #dcd7f4;
+}
+td {
+  font-size: 1.25rem;
+}
+
+.table-no-border {
+  border: none;
+}
+
+colgroup {
+  width: 250px;
+}
+/* break */
+
+/* Little test table */
+table {
+  width: 400px;
+  /* border-spacing: 30px; */
+  border-collapse: collapse;
+  /* border: 3px solid #5a43c9; */
+}
+
+table,
+th,
+td {
+  /* border: 1px solid #5a43c9; */
+  /* border: none; */
+  /* border-collapse: collapse; */
+  background-color: #f7f7f7;
+}
+
+th,
+td {
+  padding: 15px;
+  /* these to lines put space between rows */
+  border-bottom: 15px solid transparent;
+  background-clip: padding-box;
+  box-shadow: rgba (0, 0, 0, 0.04) 2px 2px 2px 0px;
+}
+
+th {
+  background-color: #dcd7f4;
+  text-align: left;
+}
+
+td {
+  font-size: 1.25rem;
+  background-color: white;
+  /* background-clip: padding-box; */
+}
+
+/* Little test table end */
+
+table {
+  /* removes space between collumns */
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  background-color: #f7f7f7;
+}
+
+th,
+td {
+  padding: 15px;
+  box-shadow: rgba (0, 0, 0, 0.04) 2px 2px 2px 0px;
+  /* the next two lines put space between rows */
+  border-bottom: 15px solid transparent;
+  background-clip: padding-box;
+}
+
+th {
+  background-color: #dcd7f4;
+  text-align: left;
+}
+td {
+  font-size: 1.25rem;
+  background-color: white;
+}
+
+.table-no-border {
+  border: none;
+}
+
+colgroup {
+  width: 250px;
+}

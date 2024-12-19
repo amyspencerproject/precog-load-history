@@ -21,6 +21,7 @@ Chart.defaults.color = "#383838";
       ],
     },
     options: {
+      animation: false,
       scales: {
         y: {
           beginAtZero: true,

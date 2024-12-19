@@ -608,20 +608,9 @@ const ctx = document.getElementById("lineObject");
     new (0, _autoDefault.default)(ctx, {
         type: "line",
         data: {
-            // map with both values
-            // labels: dataObject.map((dataPoint) => dataPoint.day + dataPoint.hour),
-            // map with if statements
-            // labels: dataObject.map((dataPoint) => {
-            //   if (dataPoint.hour === "0:00") {
-            //     return dataPoint.hour + dataPoint.day;
-            //   } else {
-            //     return dataPoint.hour;
-            //   }
-            // }),
             labels: (0, _data.dataObject).map((dataPoint)=>{
-                let i = dataPoint.hour[0];
-                console.log(i);
-                if (i.day === dataPoint.day) return dataPoint.hour + dataPoint.day;
+                console.log(dataPoint);
+                if (dataPoint.hour === "0:00") return dataPoint.hour + dataPoint.day;
                 else return dataPoint.hour;
             }),
             datasets: [

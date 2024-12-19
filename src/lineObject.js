@@ -11,27 +11,14 @@ Chart.defaults.color = "#383838";
   new Chart(ctx, {
     type: "line",
     data: {
-      // map with both values
-      // labels: dataObject.map((dataPoint) => dataPoint.day + dataPoint.hour),
-
-      // map with if statements
-      // labels: dataObject.map((dataPoint) => {
-      //   if (dataPoint.hour === "0:00") {
-      //     return dataPoint.hour + dataPoint.day;
-      //   } else {
-      //     return dataPoint.hour;
-      //   }
-      // }),
       labels: dataObject.map((dataPoint) => {
-        let i = dataPoint.hour[0];
-        console.log(i);
-        if (i.day === dataPoint.day) {
+        console.log(dataPoint);
+        if (dataPoint.hour === "0:00") {
           return dataPoint.hour + dataPoint.day;
         } else {
           return dataPoint.hour;
         }
       }),
-
       datasets: [
         {
           label: "Rate Limitting",
@@ -41,6 +28,7 @@ Chart.defaults.color = "#383838";
       ],
     },
     options: {
+      animation: false,
       scales: {
         y: {
           beginAtZero: true,
