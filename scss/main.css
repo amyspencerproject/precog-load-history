@@ -4763,8 +4763,15 @@ p {
 /* ********* Amy Styles for Load History Mockup *********** */
 
 table {
-  /* removes space between collumns */
+  /* removes space between columns creating continuous row*/
   border-collapse: collapse;
+
+  /* from Container class but no set width. Allows the table to spread wide on the page */
+  max-width: calc(100vw - 4rem);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 table,
@@ -4775,18 +4782,21 @@ td {
 
 th,
 td {
-  padding: 15px;
+  text-align: center;
   box-shadow: rgba (0, 0, 0, 0.04) 2px 2px 2px 0px;
-  /* the next two lines put space between rows */
+  /* the next two lines put space between rows so table looks like pipeline UI*/
   border-bottom: 15px solid transparent;
   background-clip: padding-box;
 }
 
 th {
-  background-color: #dcd7f4;
-  text-align: left;
+  padding: 15px 15px 5px 15px;
+  background-color: white;
+  vertical-align: baseline;
 }
+
 td {
+  padding: 15px;
   font-size: 1.25rem;
   background-color: white;
 }
@@ -4796,7 +4806,6 @@ td {
 }
 
 colgroup {
-  width: 250px;
 }
 
 .dataset-name {
