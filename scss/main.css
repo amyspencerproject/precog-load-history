@@ -4801,11 +4801,12 @@ td {
   background-color: white;
 }
 
-.table-no-border {
-  border: none;
+.td-align-left {
+  text-align: left;
 }
 
-colgroup {
+.table-no-border {
+  border: none;
 }
 
 .dataset-name {
