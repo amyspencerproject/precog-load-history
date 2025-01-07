@@ -142,14 +142,14 @@
       this[globalName] = mainExports;
     }
   }
-})({"5Os4q":[function(require,module,exports,__globalThis) {
+})({"kGyiA":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
 var HMR_USE_SSE = false;
-module.bundle.HMR_BUNDLE_ID = "e84c4b8bf0992653";
+module.bundle.HMR_BUNDLE_ID = "b53ae7411d9f0ff3";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, HMR_USE_SSE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -595,27 +595,27 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     }
 }
 
-},{}],"dedBD":[function(require,module,exports,__globalThis) {
+},{}],"gT5xQ":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _auto = require("chart.js/auto");
 var _autoDefault = parcelHelpers.interopDefault(_auto);
 var _data = require("./data");
-const ctx = document.getElementById("lineObject");
+const ctx = document.getElementById("barObject");
 (0, _autoDefault.default).defaults.backgroundColor = "rgba(90, 67, 201, 0.5)";
 (0, _autoDefault.default).defaults.borderColor = "#5a43c9";
 (0, _autoDefault.default).defaults.color = "#383838";
 (async function() {
     new (0, _autoDefault.default)(ctx, {
-        type: "line",
+        type: "bar",
         data: {
             labels: (0, _data.combinedData).map((dataPoint)=>{
-                console.log(dataPoint);
+                // console.log(dataPoint);
                 if (dataPoint.hour === "0:00") return dataPoint.hour + dataPoint.day;
                 else return dataPoint.hour;
             }),
             datasets: [
                 {
-                    label: "Rate Limitting",
+                    label: "Rate Limiting",
                     data: (0, _data.combinedData).map((dataPoint)=>dataPoint.rateLimit),
                     borderWidth: 0.5
                 }
@@ -14526,6 +14526,6 @@ const combinedData = [
     }
 ];
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["5Os4q","dedBD"], "dedBD", "parcelRequire94c2")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["kGyiA","gT5xQ"], "gT5xQ", "parcelRequire94c2")
 
-//# sourceMappingURL=index.f0992653.js.map
+//# sourceMappingURL=index.1d9f0ff3.js.map
