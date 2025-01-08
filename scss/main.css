@@ -4762,6 +4762,11 @@ p {
 
 /* ********* Amy Styles for Load History Mockup *********** */
 
+.next-button {
+  display: flex;
+  justify-content: space-between;
+}
+
 table {
   /* removes space between columns creating continuous row*/
   border-collapse: collapse;
