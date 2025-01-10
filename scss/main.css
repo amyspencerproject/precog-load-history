@@ -4761,7 +4761,13 @@ p {
 }
 
 /* ********* Amy Styles for Load History Mockup *********** */
-
+.table-nav-buttons {
+  max-width: calc(100vw - 10rem);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
 .next-button {
   display: flex;
   justify-content: space-between;
@@ -4771,12 +4777,15 @@ table {
   /* removes space between columns creating continuous row*/
   border-collapse: collapse;
 
-  /* from Container class but no set width. Allows the table to spread wide on the page */
-  max-width: calc(100vw - 4rem);
+  /* from Container class but no set width and 10rem for max-width. Allows the table to spread wide on the page */
+  max-width: calc(100vw - 10rem);
   margin-left: auto;
   margin-right: auto;
   margin-top: 3rem;
   margin-bottom: 3rem;
+
+  /* Set this width to 100% so column widths can be reduce relative to the entire table */
+  /* width: 100%; */
 }
 
 table,
@@ -4787,8 +4796,8 @@ td {
 
 th,
 td {
-  text-align: center;
   box-shadow: rgba (0, 0, 0, 0.04) 2px 2px 2px 0px;
+
   /* the next two lines put space between rows so table looks like pipeline UI*/
   border-bottom: 15px solid transparent;
   background-clip: padding-box;
@@ -4797,13 +4806,28 @@ td {
 th {
   padding: 15px 15px 5px 15px;
   background-color: white;
-  vertical-align: baseline;
+  /* vertical-align: baseline; */
+  text-align: center;
 }
 
 td {
   padding: 15px;
   font-size: 1.25rem;
   background-color: white;
+  text-align: center;
+}
+
+colgroup {
+  width: 100%;
+}
+
+.table-date {
+  width: 10%;
+  /* text-align: center; */
+}
+
+.wrap {
+  word-wrap: break-word;
 }
 
 .td-align-left {
