@@ -4761,19 +4761,69 @@ p {
 }
 
 /* ********* Amy Styles for Load History Mockup *********** */
-.table-nav-buttons {
+/* Table-navButtons and nav-button applied with Button and button classes */
+.Table-navButtons {
   max-width: calc(100vw - 10rem);
   margin-left: auto;
   margin-right: auto;
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
-.next-button {
+.nav-button {
   display: flex;
   justify-content: space-between;
 }
 
-table {
+/* styles for extra nav button options */
+.nav-link {
+  display: inline-block;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+.nav {
+  display: inline-block;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: #383838;
+}
+
+.next {
+  background-color: rgb(91, 67, 201);
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
+}
+/* .nav-link:hover {
+  background-color: #fff;
+  color: #5b43c9;
+} */
+
+.nav:hover {
+  background-color: #fff;
+  color: #5b43c9;
+}
+
+/* .nav-button-previous {
+  background-color: #f1f1f1;
+  color: #383838;
+}
+
+.nav-button-next {
+  background-color: rgb(91, 67, 201);
+  color: white;
+}
+
+.nav-button-round {
+  border-radius: 50%;
+} */
+
+Table {
   /* removes space between columns creating continuous row*/
   border-collapse: collapse;
 

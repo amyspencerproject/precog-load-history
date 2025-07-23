@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter <Search></Search></title>
+    <link rel="stylesheet" type="text.css" href="./scss/normalize.css" />
+    <link rel="stylesheet" href="./filter-search.css" />
+    <link rel="stylesheet" href="./scss/fonts.css" />
+    <link rel="stylesheet" href="./scss/fontawesome-all.css" />
+    <link rel="stylesheet" href="./scss/google.css" />
+  </head>
+  <body>
+    <div class="Container">
+      <input
+        type="text"
+        id="myInput"
+        onkeyup="myFunction()"
+        placeholder="Search for names.."
+      />
+      <button id="table-filter-button" onclick="clearFilterInput()">
+        Clear filter
+      </button>
+
+      <table id="myTable">
+        <tr class="header">
+          <th style="width: 60%">Name</th>
+          <th style="width: 40%">Country</th>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Germany</td>
+        </tr>
+        <tr>
+          <td>Berglunds snabbkop</td>
+          <td>Sweden</td>
+        </tr>
+        <tr>
+          <td>Island Trading</td>
+          <td>UK</td>
+        </tr>
+        <tr>
+          <td>Koniglich Essen</td>
+          <td>Germany</td>
+        </tr>
+      </table>
+    </div>
+
+    <script>
+      function myFunction() {
+        // Declare variables
+        let input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        // tr = table.getElementsByTagName("tr");
+        // from the madcap project
+        tbody = table.getElementsByTagName("tbody")[0];
+        tr = tbody.getElementsByTagName("tr");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+
+      function clearFilterInput() {
+        input = document.getElementById("myInput");
+        input.value = "";
+        myFunction(); // force the table to reset since there is no keyup action here
+      }
+    </script>
+  </body>
+</html>
